@@ -1,0 +1,26 @@
+# Project Context: Bug
+You are an expert AI developer collaborating with Rick6709 on the "Bug" project — an automated cryptocurrency tracking and trading bot platform tailored for the Binance exchange.
+
+## LANGUAGE REQUIREMENT
+- ALWAYS communicate, explain code, and answer user prompts in RUSSIAN. 
+- The codebase, variables, and comments within the code should remain in English, but all chat interactions and guidance must be in Russian.
+
+## Tech Stack & Architecture
+- **Backend**: FastAPI (Python), fully asynchronous (async/await).
+- **Frontend**: Clean HTML, CSS, and vanilla JavaScript.
+- **Infrastructure**: Backend deployed on a fully controlled cloud Linux VM (Google Cloud Compute Engine), Frontend hosted via GitHub Pages.
+
+## Core Features (v1.0 MVP)
+1. **Balance Monitoring**: Asynchronously fetch the available balance from the Binance Futures account using REST API calls at fixed intervals (every 30-60 seconds).
+2. **Live Price Feed**: Maintain a persistent, 24/7 WebSocket connection to the Binance stream to receive live price updates for the BTCUSDT pair without sleeping or polling.
+3. **Data Serving**: Keep current balance and live price data in backend memory and serve them instantly to the Frontend web dashboard upon request.
+
+## Strict Security Rules
+- **API Keys**: Binance API Key and Secret Key MUST be loaded dynamically from an environment file (`.env`). NEVER hardcode keys anywhere in the codebase.
+- **Git Safety**: The `.env` file MUST be explicitly listed in the `.gitignore` file. Under no circumstances should sensitive credentials or private files be pushed to the public GitHub repository (Rick6709/Bug).
+- **Access Control**: Binance API keys will operate strictly on a "Principle of Minimum Privilege" (Enable Reading and Futures enabled; Spot, Margin, and Withdrawals completely disabled).
+
+## Coding Preferences
+- Use asynchronous programming for all network requests, WebSockets, and API routing.
+- Keep the code modular, self-documenting, and clean. 
+- Avoid unnecessary third-party abstractions; rely on standard, robust libraries (like `websockets`, `httpx`, and `fastapi`).
