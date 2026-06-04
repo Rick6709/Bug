@@ -10,4 +10,4 @@
 - **Data Flow**: The backend stores the latest price and balance in memory (global state / variables) and serves this fresh data to the frontend via simple HTTP endpoints.
 
 ## Current Next Step:
-We need to initialize the repository structure. The immediate task for the AI assistant is to generate the base directory tree, set up environment protection, and write the initial async FastAPI scaffolding.
+The codebase has been successfully pushed and synced with the GitHub repository (`Rick6709/Bug`). The next step is to configure the environment on the Google Cloud VM and deploy the FastAPI backend.
